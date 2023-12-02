@@ -313,7 +313,7 @@ header .content .container .about button {
 }
 
 header .content .container .pic {
-  background-image: url('../images/image-removebg-preview.png');
+  background-image: url('../images/image.png');
   background-repeat: no-repeat;
   background-size: cover;
   justify-self: center;
@@ -354,10 +354,17 @@ header .content .container .pic {
 /* end header */
 
 /* start section */
+section {
+  margin-top: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 section h1.title {
   width: fit-content;
   margin: 25px auto;
   position: relative;
+  cursor: pointer;
 }
 
 section h1.title:hover::before {
@@ -402,9 +409,6 @@ section h1.title::after {
 /* start about */
 
 .about .container {
-  margin-top: 50px;
-  padding-top: 50px;
-  padding-bottom: 50px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 45px;
@@ -431,9 +435,6 @@ section h1.title::after {
 
 /* start experience */
 .experience .container {
-  margin-top: 50px;
-  padding-top: 50px;
-  padding-bottom: 50px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px;
@@ -514,3 +515,190 @@ section h1.title::after {
 }
 
 /* end experience */
+
+/* start projects */
+.projects .container .app {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 80px 25px;
+}
+
+.projects .container .app .desc h3 {
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.projects .container .app .desc h3 span {
+  margin-right: 25px;
+}
+
+.projects .container .app .desc p {
+  margin-top: 40px;
+}
+
+.projects .container .app .download .icon {
+  display: flex;
+  flex-direction: row;
+}
+
+.projects .container .app .download .icon img {
+  width: 120px;
+  height: 120px;
+}
+
+.projects .container .app .download .icon h4 {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 15px;
+}
+
+.projects .container .app .download .benefits {
+  margin-top: 40px;
+}
+
+.projects .container .app .download .benefits li {
+  font-size: 18px;
+  padding: 5px 0;
+}
+
+.projects .container .app .download .benefits li span {
+  margin-right: 15px;
+}
+
+.projects .container .app .download .install {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 5px 16px;
+  margin-top: 40px;
+  color: var(--primary-color);
+}
+
+.projects .container .app .download .install:hover {
+  color: var(--secondary-color);
+}
+
+.projects .activities li {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 60px;
+}
+
+.projects .activities li img {
+  height: 450px;
+  margin: 0 auto;
+}
+
+.projects .activities li .desc h3 {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.projects .activities li .desc p {
+  font-size: 16px;
+  margin-top: 15px;
+}
+/* end projects */
+
+/* start contact */
+.contact .container {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.contact .container img {
+  width: 350px;
+  margin: 0 auto;
+}
+
+.contact .container .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact .container .form input,
+.contact .container .form textarea {
+  width: 100%;
+  padding: 8px 15px;
+  outline: none;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #eee;
+  font-size: 14px;
+}
+
+.contact .container .form > input,
+.contact .container .form textarea {
+  margin-top: 15px;
+}
+
+.contact .container .form textarea {
+  height: 120px;
+  resize: none;
+}
+
+.contact .container .form div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.contact .container .form div input:first-child {
+  margin-right: 8px;
+}
+
+.contact .container .form button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 8px 15px;
+}
+
+/* end contact */
+
+/* start footer */
+footer {
+  padding: 80px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  border-radius: 15px 15px 0 0;
+}
+
+footer .social {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+footer .social a {
+  font-size: 22px;
+  color: var(--secondary-color);
+  transition: all 0.3s ease;
+  width: 45px;
+  height: 45px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .social a:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+footer p {
+  margin-top: 40px;
+  color: var(--secondary-color);
+}
+/* end footer */
