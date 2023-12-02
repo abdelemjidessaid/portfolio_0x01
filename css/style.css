@@ -91,6 +91,8 @@ header nav .links li {
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
+  color: var(--primary-color);
+  font-weight: 600;
 }
 
 header nav .links li a {
@@ -200,7 +202,12 @@ header nav .burger.active::after {
     right: 0;
     width: 100%;
     height: calc(100vh - 60px);
-    background-color: rgba(255, 255, 255, 0.8);
+    background: linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    );
+    backdrop-filter: blur(5px);
     z-index: 2;
     flex-direction: column;
   }

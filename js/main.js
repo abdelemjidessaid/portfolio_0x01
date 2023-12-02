@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const navLinks = document.querySelector('header nav .links');
   const links = navLinks.children;
-  console.log(links);
 
   // on a nav link clicked
   for (let i = 0; i < links.length; i++) {
@@ -14,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
       links[i].classList.add('opened');
     });
   }
+
   // hamburger menu on click
   const burgerMenu = document.querySelector('header nav .burger');
   burgerMenu.addEventListener('click', function () {
@@ -24,6 +24,18 @@ document.addEventListener('DOMContentLoaded', () => {
       burgerMenu.classList.add('active');
       navLinks.classList.add('active');
     }
+  });
+
+  // download cs button on click
+  const downlaodCv = document.querySelector('header .content .btn');
+  downlaodCv.addEventListener('click', function () {
+    showAlert();
+  });
+
+  // button of send on click
+  const sendButton = document.querySelector('.contact .send');
+  sendButton.addEventListener('click', function () {
+    showAlert();
   });
 });
 
@@ -41,4 +53,8 @@ function removeClass(list, className) {
   for (let i = 0; i < list.length; i++) {
     list[i].classList.remove(className);
   }
+}
+
+function showAlert() {
+  alert('This functionality does not work yet');
 }
