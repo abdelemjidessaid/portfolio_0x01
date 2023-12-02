@@ -5,9 +5,15 @@
 }
 
 :root {
-  --main-color: #58d4f0;
+  --main-color: #53d0ec;
   --primary-color: black;
   --secondary-color: white;
+}
+
+.dark-mode {
+  --main-color: #18a0be;
+  --primary-color: white;
+  --secondary-color: #1d1d1d;
 }
 
 ul {
@@ -25,6 +31,8 @@ html {
 body {
   background-color: var(--secondary-color);
   font-family: 'Poppins', sans-serif;
+  color: var(--primary-color);
+  transition: all 0.3s ease-in-out;
 }
 
 /* Mobile Devices */
@@ -306,6 +314,7 @@ header .content .container .about .social a:hover {
   transition: all 0.3s ease;
   font-size: 16px;
   font-weight: bold;
+  color: var(--primary-color);
 }
 
 .btn:hover {
@@ -670,17 +679,18 @@ section h1.title::after {
 
 /* start footer */
 footer {
-  padding: 80px 25px;
+  margin-top: 40px;
+  padding: 40px 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--primary-color);
-  border-radius: 15px 15px 0 0;
+  background-color: var(--main-color);
 }
 
 footer .social {
   width: 100%;
+  max-width: 600px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;

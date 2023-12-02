@@ -8,11 +8,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // on a nav link clicked
   for (let i = 0; i < links.length; i++) {
+    if (links[i].classList.contains('mode')) {
+      continue;
+    }
     links[i].addEventListener('click', () => {
       removeClass(links, 'opened');
       links[i].classList.add('opened');
     });
   }
+
+  // dark mode button on click
+  const darkMode = document.querySelector('header nav .links .mode');
+  const body = document.querySelector('body');
+  darkMode.addEventListener('click', function () {
+    body.classList.toggle('dark-mode');
+  });
 
   // hamburger menu on click
   const burgerMenu = document.querySelector('header nav .burger');
