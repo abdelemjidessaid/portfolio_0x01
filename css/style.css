@@ -61,6 +61,10 @@ body {
   margin: 0 auto;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 /* start header */
 header {
   width: 100%;
@@ -141,7 +145,7 @@ header nav .burger {
   height: 24px;
   border: none;
   outline: none;
-  background-color: var(--secondary-color);
+  background-color: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
   display: none;
@@ -206,7 +210,7 @@ header nav .burger.active::after {
   header nav .links.active {
     display: block;
     position: absolute;
-    top: 60px;
+    top: 0;
     right: 0;
     width: 100%;
     height: calc(100vh - 60px);
